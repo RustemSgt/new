@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Casino Home</title></head>
+<body>
+    <h1>Welcome to the Casino</h1>
+    <ul>
+        {% for game in games %}
+        <li>
+            <a href="{% url 'place_bet' game.id %}">{{ game.name }}</a>
+            <p>{{ game.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
